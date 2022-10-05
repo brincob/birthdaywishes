@@ -14,7 +14,7 @@ birthdays_dict = {(data_row["month"], data_row["day"]): data_row for (index, dat
 
 if today in birthdays_dict:
     birthday_person = birthdays_dict[today]
-    file_path = f"letter_templates/letter_{random.randint(1,3)}.txt"
+    file_path = f"letterTemplates/letter_{random.randint(1,3)}.txt"
     with open(file_path) as letter_file:
         contents = letter_file.read()
         contents = contents.replace("[NAME]", birthday_person["name"])
